@@ -3,7 +3,7 @@ package com.nikita.prvztasks;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HttpResponce {
+public class HttpResponse {
     private final static String NEW_LINE = "\r\n";
 
     private final Map<String, String> headers = new HashMap<>();
@@ -11,7 +11,7 @@ public class HttpResponce {
     private int statusCode = 200;
     private String status = "Ok";
 
-    public HttpResponce() {
+    public HttpResponse() {
         this.headers.put("Server", "naive");
         this.headers.put("Connection", "Close");
     }
