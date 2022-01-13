@@ -65,9 +65,9 @@ public class Server {
                 buffer.clear();
             }
             HttpRequest request = new HttpRequest(builder.toString());
-            HttpResponce responce = new HttpResponce();
+            HttpResponse response = new HttpResponse();
 
-            String body = this.handler.handle(request, responce);
+            String body = this.handler.handle(request, response);
             String page = String.format(HEADERS, body.length()) + body;
             ByteBuffer resp = ByteBuffer.wrap(page.getBytes());
             clientChannel.write(resp);
